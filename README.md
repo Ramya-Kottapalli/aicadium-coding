@@ -26,12 +26,14 @@ The goal of this project is to build a ML model to predict whether or not a cust
 **The pipeline includes:**
 - Environment setup
 - Data exploration and statistics to understand the data, attributes and how they interact with each other.
-- Feature scaling/normalization
+- Data preprocessing
 - Feature importance and selection (also dealing with imbalanced dataset)
-- Model training and hyperparameter tuning
+- Model training and hyperparameter tuning with the selected features
 - Model evaluation and metrics
 
 **Setup:**
-- Run setup.sh (with desired python 3.7 path) to create venv and install dependencies
-- Select venv python for Jupyter Kernel
-- Later deactivate and activate venv via "source aicadium_coding/bin/activate" "deactivate"
+1) Run *venv.sh* (with desired python 3.7 path) to create new virtual environment
+2) Run *source aicadium_coding/bin/activate*
+3) Run *install.sh* to install dependencies
+4) Select the specified venv python for Jupyter Kernel
+5) Later deactivate and activate venv via "source aicadium_coding/bin/activate" "deactivate"
