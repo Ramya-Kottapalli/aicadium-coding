@@ -24,9 +24,14 @@ For example, for Valentina’s day, this value takes a nonzero value between Feb
 The goal of this project is to build a ML model to predict whether or not a customer will buy the product.
 
 **The pipeline includes:**
+- Environment setup
 - Data exploration and statistics to understand the data, attributes and how they interact with each other.
 - Feature scaling/normalization
 - Feature importance and selection (also dealing with imbalanced dataset)
-- model training and hyperparameter tuning
-- model evaluation and metrics
+- Model training and hyperparameter tuning
+- Model evaluation and metrics
 
+**Setup:**
+- Run setup.sh (with desired python 3.7 path) to create venv and install dependencies
+- Select venv python for Jupyter Kernel
+- Later deactivate and activate venv via "source aicadium_coding/bin/activate" "deactivate"
