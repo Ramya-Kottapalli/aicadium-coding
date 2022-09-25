@@ -5,11 +5,13 @@ from flask import Flask, request, jsonify, Response
 from xgboost import XGBClassifier
 from sklearn.preprocessing import LabelEncoder
 
+# $1 = test dataset path, $2= model path, $3= feature selection bool (0 or 1)
 app = Flask(__name__)
 
 features = ['PageValues', 'Month', 'VisitorType', 'BounceRates', 'ProductRelated_Duration', 
 'ProductRelated', 'Administrative_Duration', 'Informational', 'Administrative', 'ExitRates', 'SpecialDay']
 
+select = sys.argv[3]
 model = XGBClassifier()
 model.load_model(sys.argv[2])
 
@@ -20,7 +22,10 @@ def preprocess(df):
 
     df[label_encode] = df[label_encode].apply(lambda col: le.fit_transform(col))
 
-    df = df[features]
+    if select==1:
+        #print("selecting")
+        df = df[features]
+
     return df
 
 @app.route('/')
