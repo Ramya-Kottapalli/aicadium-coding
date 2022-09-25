@@ -11,7 +11,7 @@ features = ['PageValues', 'Month', 'VisitorType', 'BounceRates', 'ProductRelated
 'ProductRelated', 'Administrative_Duration', 'Informational', 'Administrative', 'ExitRates', 'SpecialDay']
 
 model = XGBClassifier()
-model.load_model('models/final_model.txt')
+model.load_model(sys.argv[2])
 
 # same preprocssing applied to training data - categorical to numerical and feature selection
 def preprocess(df):

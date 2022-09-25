@@ -30,7 +30,8 @@ The goal of this project is to build a ML model to predict whether or not a cust
 - Feature importance and selection (also dealing with imbalanced dataset)
 - Model training and hyperparameter tuning with the selected features
 - Model evaluation and metrics
-- simple flask deployment - run *python3 server.py 'data/X_test.csv'*
+- simple flask deployment - run 
+    *python3 server.py 'data/X_test.csv' 'models/final_model_selected_features.txt*
 
 **Setup:**
 1) Run *venv.sh* (with desired python 3.7 path) to create new virtual environment
